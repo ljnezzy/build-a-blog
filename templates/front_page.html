@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+{% for blog in blogs %}
+    <p>
+        <label>Title:
+        {{ blog.title }}
+        </label>
+        <br>
+        <label>Date:
+        {{ blog.created }}
+        </label>
+        <br>
+        <br>
+        <label>Entry:
+        {{ blog.entry_blog }}
+        </label>
+    </p>
+<br>
+<br>
+
+{% endfor %}
+
+<form action="/all">
+    <input type="submit" value="See All"/>
+</form>
+
+{% endblock %}
