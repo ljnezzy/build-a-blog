@@ -59,13 +59,13 @@ class NewPost(Handler):
 
         if (not new_blog_title) or (new_blog_title.strip() == ""):
             have_error = True
-            error = "Please give your blog a title."
+            error = "A Title is required."
         else:
             error = ""
 
         if (not new_blog_body) or (new_blog_body.strip() == ""):
             have_error = True
-            error = "Please write something."
+            error = "Something must be entered."
 
 
         if not have_error:

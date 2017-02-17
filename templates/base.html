@@ -1,29 +1,82 @@
 <!DOCTYPE html>
 <html>
-    <style type="text/css">
-
-        .error {
-            color: red;
-        }
-        a {
-            color: black
-            text-decoration:none
-        }
-    </style>
     <head>
         <title>LC 101 Build-A-Blog</title>
+            <style>
+            .error {
+                color: red;
+            }
+            body {
+            	width: 100%;
+            	background-color: #DFDCDC;
+            	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+            	margin-right: 50px;
+            	font-size: 16px;
+
+            	}
+
+            .container-fluid{
+            	max-width: 960px;
+            	margin-right: auto;
+            	margin-left: auto;
+            	background-color: #BAE2F8;
+            	margin-top: -22px;
+
+            }
+
+            header{
+            	text-transform: capitalize;
+            	font-size: medium;
+            	text-align: center;
+            }
+            .nav{
+                display: inline-block;
+
+            }
+            a{
+            	text-decoration: none;
+                text-transform: capitalize;
+            }
+            nav a{
+            	text-decoration: none;
+            	color: #0100A1;
+            	font-weight: 500;
+            }
+            li{
+            	text-decoration: none;
+            	list-style-type: none;
+                display: inline-block;
+                padding-right: 30px;
+            }
+            a:hover {
+            	outline-width: 0;
+            	font-weight: bold;
+            	color: #0015FF;
+            }
+            .content {
+                padding-left: 10px;
+                padding-bottom: 50px;
+            }
+            h3 {
+                text-transform: capitalize;
+            }
+
+            </style>
     </head>
     <body>
-        <heading><h1>LC 101 Build-A-Blog</h1></heading>
-        <div class=nav>
-            <h2>
-                <a href="/">Home</a>
-            </h2>
-            <h2>
-                <a href="/new-post">New Blog</a>
-            </h2>
+        <div class=container-fluid>
+            <header><h1>LC 101 Build-A-Blog</h1></header>
+                <div class=nav>
+                    <ul>
+                        <li><h2><a href="/">Home</a></h2></li>
+                        &ensp;&ensp;&ensp;
+                        <li><h2><a href="/new-post">New Blog</a></h2></li>
+                    </ul>
+                </div>
+                <div class=content>
+                    {% block content %}
+                    {% endblock %}
+                </div>
         </div>
-        {% block content %}
-        {% endblock %}
     </body>
 </html>
